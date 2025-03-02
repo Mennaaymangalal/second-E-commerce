@@ -7,9 +7,8 @@ export default function Shop() {
 
   function getAllProduct(){
     setIsLoading(true)
-    axios.get("http://test-ecomerce.xn--hrt-w-ova.de/api/product/get",
-     { headers: {
-        "Country-Id": "1",
+    axios.get("http://test-ecomerce.xn--hrt-w-ova.de/api/category/get",
+     { headers: {       
         "Accept-Language": "en"
       }}
     ).then(({data})=>{     
@@ -28,37 +27,26 @@ export default function Shop() {
 
   return (
     <>
-      <div className="">
+      <div className="mt-24">
     
       {/* Product List */}
   
-      <section  className="py-5">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <section  className="container py-5">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
        
       {
         products.map((product,index)=>{
           return   <article key={index}
             
-          className="rounded-xl dark:bg-slate-950 bg-white p-3 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
+          className=" rounded-xl dark:bg-slate-950 bg-white p-3 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
         >
           <a href="#">
             <div className="relative flex items-end overflow-hidden rounded-xl">
-            {product.categories?.length > 0 ? (
-                      product.categories.map((category, catIndex) => (
-                        <img
-                          key={catIndex}
-                          src={`http://test-ecomerce.xn--hrt-w-ova.de/${category.image}`}
-                          alt={product.title}
-                          className="w-full h-48 object-cover mb-2"
-                        />
-                      ))
-                    ) : (
-                      <img
-                        src="https://via.placeholder.com/300"
-                        alt="Default"
-                        className="w-full h-48 object-cover"
-                      />
-                    )}
+            <img                                           
+                       src={`http://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
+                       alt={product.title}
+                       className="w-full h-48 object-cover mb-2"
+                     />
             </div>
 
             <div className="mt-1 p-2">

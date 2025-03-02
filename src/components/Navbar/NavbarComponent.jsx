@@ -36,7 +36,7 @@ export default function NavbarComponent() {
 
   return (
     <>
-   <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+   <Navbar className="fixed top-0 right-0 left-0" isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
 
       <NavbarContent>
         <NavbarMenuToggle

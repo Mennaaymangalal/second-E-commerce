@@ -91,7 +91,7 @@ export default function Register() {
   console.log(data)
  if(data.message == "User registered successfully. Please verify your email."){
   Cookies.set("token" , data.data.token)
-  navigate("/login")
+  navigate("/")
  }
   setErrMsg(data.message)
   console.log(data.data.token)
@@ -119,7 +119,7 @@ const validationSchema = Yup.object({
   
   return (
     <>
-    <div className="sm:w-2/3 m-auto py-9">
+    <div className="sm:w-2/3 m-auto py-9 mt-24">
     <div className="text-center font-Gilroy-Bold">
      <h1 className=' text-2xl font-semibold'>I am new to This store</h1>
      <p className=''>Enjoy exclusive discounts & offers</p>

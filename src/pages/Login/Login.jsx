@@ -83,17 +83,17 @@ export default function Login() {
   function onSubmit(values){
     setErrMsg("")
    setIsLoading(true)
-  axios.post("http://test-ecomerce.xn--hrt-w-ova.de/api/register", values)
+  axios.post("http://test-ecomerce.xn--hrt-w-ova.de/api/login", values)
  .then(({data})=>{
   console.log(data)
  if(data.isSuccessful == true){ 
   navigate("/")
  }
-  setErrMsg(data.message)
+  setErrMsg(data.response.data.message)
   
   }).catch((err)=>{
     console.log(err)
-    setErrMsg(data.message)
+    setErrMsg(data.response.data.message)
   }).finally(()=>{
     setIsLoading(false)
   })
@@ -114,7 +114,7 @@ const validationSchema = Yup.object({
   
   return (
     <>
-    <div className="sm:w-2/3 m-auto py-9">
+    <div className="sm:w-2/3 m-auto py-9 mt-24">
     <h1 className='font-Gilroy-Bold text-2xl font-semibold text-center'>I am already a customer</h1>
     <form onSubmit={handleSubmit}>
     <div className="py-5 grid gap-4 ">    
