@@ -52,11 +52,11 @@ export default function Shop() {
           <a href="#">
             <div className="relative flex items-end overflow-hidden rounded-xl">
              {
-              product.categories.map((product,index)=>(
-                <img      key={index}                                      
-                src={`https://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
+              product.productimage.map((product,index)=>(
+                <img      key={index}                           
+                src={`https://test-ecomerce.xn--hrt-w-ova.de/${product.link}`}
                 alt={product.title}
-                className="w-full h-48 object-cover mb-2"
+                className="w-full h-48 object-contain mb-2"
               />
               ))
              }
