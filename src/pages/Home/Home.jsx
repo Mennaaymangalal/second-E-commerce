@@ -49,7 +49,7 @@ export default function Home() {
       <button type="submit" className="absolute right-0 top-0 mt-5 mr-4">
         <svg
           className="text-white h-4 w-4 fill-current"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           viewBox="0 0 56.966 56.966"
           width="512px"
           height="512px"

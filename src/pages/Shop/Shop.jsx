@@ -54,7 +54,7 @@ export default function Shop() {
              {
               product.categories.map((product,index)=>(
                 <img      key={index}                                      
-                src={`http://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
+                src={`https://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
                 alt={product.title}
                 className="w-full h-48 object-cover mb-2"
               />

@@ -11,7 +11,7 @@ export default function Categories({product}) {
          <a href="#">
            <div className="relative flex items-end overflow-hidden rounded-xl">
            <img                                           
-                      src={`http://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
+                      src={`https://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
                       alt={product.title}
                       className="w-full h-48 object-cover mb-2"
                     />
