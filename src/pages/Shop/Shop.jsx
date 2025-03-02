@@ -1,5 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Loading from '../../components/Loading/Loading';
+
+
 
 export default function Shop() {
   const [isLoading , setIsLoading] = useState(false)
@@ -21,13 +24,19 @@ export default function Shop() {
     })
   }
 
+
   useEffect(()=>{
     getAllProduct()
   },[])
 
   return (
     <>
-      <div className="mt-24">
+      {isLoading ? (
+      <div className="flex py-40 justify-center items-center">
+        <Loading />
+      </div>
+    ) : 
+    <div className="mt-24">
     
       {/* Product List */}
   
@@ -75,6 +84,9 @@ export default function Shop() {
    
      
     </div>
+
+  }
+      
     </>
   )
 }
