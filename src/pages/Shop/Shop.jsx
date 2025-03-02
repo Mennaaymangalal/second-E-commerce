@@ -10,7 +10,7 @@ export default function Shop() {
 
   function getAllProduct(){
     setIsLoading(true)
-    axios.get("http://test-ecomerce.xn--hrt-w-ova.de/api/product/category?category_id=5&page=1",
+    axios.get("https://test-ecomerce.xn--hrt-w-ova.de/api/product/category?category_id=5&page=1",
      { headers: {       
         "Accept-Language": "en"
       }}

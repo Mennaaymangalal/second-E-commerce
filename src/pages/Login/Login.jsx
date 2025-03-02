@@ -4,7 +4,6 @@ import { useFormik } from 'formik';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import * as Yup from "yup"
-import Cookies from 'js-cookie'; 
 export const EyeSlashFilledIcon = (props) => {
   return (
     <svg
@@ -83,7 +82,7 @@ export default function Login() {
   function onSubmit(values){
     setErrMsg("")
    setIsLoading(true)
-  axios.post("http://test-ecomerce.xn--hrt-w-ova.de/api/login", values)
+  axios.post("https://test-ecomerce.xn--hrt-w-ova.de/api/login", values)
  .then(({data})=>{
   console.log(data)
  if(data.isSuccessful == true){ 

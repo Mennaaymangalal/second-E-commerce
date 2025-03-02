@@ -11,7 +11,7 @@ export default function Home() {
 
   function getAllProduct(){
     setIsLoading(true)
-    axios.get("http://test-ecomerce.xn--hrt-w-ova.de/api/category/get",
+    axios.get("https://test-ecomerce.xn--hrt-w-ova.de/api/category/get",
      { headers: {       
         "Accept-Language": "en"
       }}

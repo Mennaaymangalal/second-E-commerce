@@ -85,7 +85,7 @@ export default function Register() {
   function onSubmit(values){
     setErrMsg("")
    setIsLoading(true)
-  axios.post("http://test-ecomerce.xn--hrt-w-ova.de/api/register", values)
+  axios.post("https://test-ecomerce.xn--hrt-w-ova.de/api/register", values)
  .then(({data})=>{
 
   console.log(data)
