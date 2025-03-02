@@ -7,7 +7,7 @@ export default function Shop() {
 
   function getAllProduct(){
     setIsLoading(true)
-    axios.get("http://test-ecomerce.xn--hrt-w-ova.de/api/category/get",
+    axios.get("http://test-ecomerce.xn--hrt-w-ova.de/api/product/category?category_id=5&page=1",
      { headers: {       
         "Accept-Language": "en"
       }}
@@ -42,11 +42,15 @@ export default function Shop() {
         >
           <a href="#">
             <div className="relative flex items-end overflow-hidden rounded-xl">
-            <img                                           
-                       src={`http://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
-                       alt={product.title}
-                       className="w-full h-48 object-cover mb-2"
-                     />
+             {
+              product.categories.map((product,index)=>(
+                <img      key={index}                                      
+                src={`http://test-ecomerce.xn--hrt-w-ova.de/${product.image}`}
+                alt={product.title}
+                className="w-full h-48 object-cover mb-2"
+              />
+              ))
+             }
             </div>
 
             <div className="mt-1 p-2">
