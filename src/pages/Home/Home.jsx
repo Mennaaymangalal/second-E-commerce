@@ -35,7 +35,7 @@ export default function Home() {
     <div className="flex justify-center items-center flex-col">
 
       <div className="">
-      <h1 className='main1'>Make your interior more <br/>
+      <h1 className='main1 px-5'>Make your interior more <br/>
      minimalistic & modern</h1>
       </div>
 
