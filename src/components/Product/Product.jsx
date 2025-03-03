@@ -5,7 +5,7 @@ export default function Product({ product }) {
   return (
     <article className="rounded-xl dark:bg-slate-950 bg-white p-3 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
      
-      <Link to={"/productdetails"} className="relative flex items-end overflow-hidden rounded-xl">
+      <Link to={"/productdetails/" + product.id} className="relative flex items-end overflow-hidden rounded-xl">
         {
           product.productimage.map((productImage, index) => (
             <img
@@ -20,7 +20,9 @@ export default function Product({ product }) {
 
       <div className="mt-1 p-2">
         <h2 className="text-slate-700"></h2>
+        <Link to={"/productdetails/" + product.id}>
         <p className="mt-1 text-sm text-slate-400">{product.title}</p>
+        </Link>
         <p className="text-lg line-clamp-2">{product.description}</p>
 
         <div className="mt-3 flex items-end justify-between">

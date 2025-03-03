@@ -18,7 +18,7 @@ function App() {
       {path:'/shop' , element:<Shop/>},
       {path:'/login' , element:<Login/>},
       {path:'/register' , element:<Register/>},
-      {path:'/productdetails' , element:<ProductDetails/>}
+      {path:'/productdetails/:id' , element:<ProductDetails/>}
     ]}
   ])  
 
