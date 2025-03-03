@@ -37,7 +37,7 @@ export default function Shop() {
         <Loading />
       </div>
     ) : 
-    <div className="mt-24">
+    <div className="mt-24 my-10">
 
       <div className="container gap-10 grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col md:justify-center ps-10 ">
