@@ -17,3 +17,21 @@
     font-weight: 800;
     color: white;    
 }
+.fimg1{
+    background-image:url(../../assets/eeb8f98032e5e2b9bd9d84137bbf9d6e.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fimg2{
+    background-image:url(../../assets/e5cc03367af5eb6766025000d1108f3d.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fimg3{
+    background-image:url(../../assets/b2a3882779d03355c1e1da861bab3d1d.jpeg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

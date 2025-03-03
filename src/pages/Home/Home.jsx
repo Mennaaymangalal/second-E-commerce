@@ -5,6 +5,8 @@ import Categories from '../../components/Categories/Categories'
 import img from '../../assets/1dde88ae6788c27acd5fc55158eb2f11.jpeg'
 
 
+
+
 export default function Home() {
   const [isLoading , setIsLoading] = useState(false)
   const [products , setProducts] = useState([])
@@ -100,6 +102,59 @@ export default function Home() {
     </div>  
 
  
+    <section className='container '>
+    <div className="my-16">
+    <div className="mb-10">
+        <p className='font-semibold text-orange-500 text-center'>SOME OF OUR</p>
+        <h4 className='text-3xl font-semibold text-center'>Featuers We Offer to You</h4>
+      </div>
+
+      <div className="grid grid-cols-3 gap-16 ">
+      <div  className="fimg1 rounded-xl h-96 dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+           
+              <div className="relative overflow-hidden rounded-xl">
+              {/* <img                              
+                  src={fimg1}
+                  alt={""}
+                  className="w-full  h-fit  object-contain "
+                /> */}
+              </div>
+             
+           
+          </div>
+
+          <div  className=" rounded-xl h-96 fimg2 dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+           
+           <div className="relative  overflow-hidden rounded-xl">
+           {/* <img                              
+               src={fimg2}
+               alt={""}
+               className="w-full h-fit   object-contain "
+             /> */}
+           </div>
+          
+        
+       </div>
+         
+
+       <div  className=" rounded-xl h-96 fimg3 dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+           
+           <div className="relative  overflow-hidden rounded-xl">
+           {/* <img                              
+               src={fimg3}
+               alt={""}
+               className="w-full h-fit object-contain "
+             /> */}
+           </div>
+          
+        
+       </div>
+
+
+      </div>
+    </div>
+    </section>
+
     </>
   )
 }
