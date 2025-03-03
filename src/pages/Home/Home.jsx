@@ -84,7 +84,7 @@ export default function Home() {
        
       </div>
 
-    <div className="container grid grid-cols-2 gap-20">
+    <div className="container grid grid-cols-1 md:grid-cols-2 gap-20">
       <div className="my-16 ps-8">
         <img className='rounded-r-3xl'
         src={img}
@@ -121,7 +121,7 @@ export default function Home() {
            
           </div>
 
-          <div  className="fimg2 rounded-xl  dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+          <div  className="fimg2 rounded-xl h-[75vh] dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
            
            <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-32 mb-8 bg-white bg-opacity-80 rounded-xl">
           <h4 className='font-semibold text-xl'>Detailed Product Descriptions</h4>
@@ -131,7 +131,7 @@ export default function Home() {
         
        </div>
 
-       <div  className="fimg3 rounded-xl  dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+       <div  className="fimg3 rounded-xl h-[75vh] dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
            
            <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-32 mb-8 bg-white bg-opacity-80 rounded-xl">
           <h4 className='font-semibold text-xl'>Room Planner/Visualizer</h4>
