@@ -104,53 +104,42 @@ export default function Home() {
  
     <section className='container '>
     <div className="my-16">
-    <div className="mb-10">
+    <div className="mb-12">
         <p className='font-semibold text-orange-500 text-center'>SOME OF OUR</p>
         <h4 className='text-3xl font-semibold text-center'>Featuers We Offer to You</h4>
       </div>
 
-      <div className="grid grid-cols-3 gap-16 ">
-      <div  className="fimg1 rounded-xl h-96 dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+      <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-16 ">
+      <div  className="fimg1 rounded-xl h-[75vh] dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
            
-              <div className="relative overflow-hidden rounded-xl">
-              {/* <img                              
-                  src={fimg1}
-                  alt={""}
-                  className="w-full  h-fit  object-contain "
-                /> */}
+              <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-32 mb-8 bg-white bg-opacity-80 rounded-xl">
+             <h4 className='font-semibold text-xl'>Extensive Catalog</h4>
+             <p>A wide selection of furniture styles, categories, and price points.</p>
               </div>
              
            
           </div>
 
-          <div  className=" rounded-xl h-96 fimg2 dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+          <div  className="fimg2 rounded-xl  dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
            
-           <div className="relative  overflow-hidden rounded-xl">
-           {/* <img                              
-               src={fimg2}
-               alt={""}
-               className="w-full h-fit   object-contain "
-             /> */}
-           </div>
-          
-        
-       </div>
-         
-
-       <div  className=" rounded-xl h-96 fimg3 dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
-           
-           <div className="relative  overflow-hidden rounded-xl">
-           {/* <img                              
-               src={fimg3}
-               alt={""}
-               className="w-full h-fit object-contain "
-             /> */}
+           <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-32 mb-8 bg-white bg-opacity-80 rounded-xl">
+          <h4 className='font-semibold text-xl'>Detailed Product Descriptions</h4>
+          <p>Comprehensive information including dimensions, materials, care instructions, and warranty details.</p>
            </div>
           
         
        </div>
 
-
+       <div  className="fimg3 rounded-xl  dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
+           
+           <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-32 mb-8 bg-white bg-opacity-80 rounded-xl">
+          <h4 className='font-semibold text-xl'>Room Planner/Visualizer</h4>
+          <p>Tools to help customers visualize furniture in their own spaces.</p>
+          
+        </div>
+          
+        
+       </div>
       </div>
     </div>
     </section>
