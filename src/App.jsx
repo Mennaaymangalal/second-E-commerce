@@ -7,6 +7,7 @@ import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Shop from './pages/Shop/Shop'
+import ProductDetails from './pages/ProductDetails/ProductDetails';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       {index:true , element:<Home/>},
       {path:'/shop' , element:<Shop/>},
       {path:'/login' , element:<Login/>},
-      {path:'/register' , element:<Register/>}
+      {path:'/register' , element:<Register/>},
+      {path:'/productdetails' , element:<ProductDetails/>}
     ]}
   ])  
 

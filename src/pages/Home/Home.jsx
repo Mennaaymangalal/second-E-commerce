@@ -113,7 +113,7 @@ export default function Home() {
       <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-16 ">
       <div  className="fimg1 rounded-xl h-[75vh] dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
            
-              <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-36 mb-8 bg-white bg-opacity-80 rounded-xl">
+              <div className="relative dark:text-black flex flex-col items-center justify-center w-full text-center mx-8 h-36 mb-8 bg-white bg-opacity-80 rounded-xl">
              <h4 className='font-semibold text-xl'>Extensive Catalog</h4>
              <p>A wide selection of furniture styles, categories, and price points.</p>
               </div>
@@ -123,7 +123,7 @@ export default function Home() {
 
           <div  className="fimg2 rounded-xl h-[75vh] dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
            
-           <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-36 mb-8 bg-white bg-opacity-80 rounded-xl">
+           <div className="relative  dark:text-black flex flex-col items-center justify-center w-full text-center mx-8 h-36 mb-8 bg-white bg-opacity-80 rounded-xl">
           <h4 className='font-semibold text-xl'>Detailed Product Descriptions</h4>
           <p>Comprehensive information including dimensions, materials, care instructions, and warranty details.</p>
            </div>
@@ -133,7 +133,7 @@ export default function Home() {
 
        <div  className="fimg3 rounded-xl h-[75vh] dark:bg-slate-950 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
            
-           <div className="relative flex flex-col items-center justify-center w-full text-center mx-8 h-36 mb-8 bg-white bg-opacity-80 rounded-xl">
+           <div className="relative  dark:text-black flex flex-col items-center justify-center w-full text-center mx-8 h-36 mb-8 bg-white bg-opacity-80 rounded-xl">
           <h4 className='font-semibold text-xl'>Room Planner/Visualizer</h4>
           <p>Tools to help customers visualize furniture in their own spaces.</p>
           
