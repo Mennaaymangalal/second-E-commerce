@@ -2,11 +2,14 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import img from '../../assets/1740042550_67b6f136af5c0_p1.png'
+import { Button } from '@heroui/react'
 
 export default function Cart() {
     const [cartId ,setCartId] = useState(null)
     const [cartItem , setCartItem] = useState(null)
     const [cartDate , setCartData] = useState([])
+    const [isLoading , setIsLoading] = useState(false)
+
 
     useEffect(()=>{
         getCartItems()
@@ -41,8 +44,32 @@ export default function Cart() {
         });
     }
 
+    function deleteItem(item_id){
+        setIsLoading(true)
+        const token = Cookies.get("token");
+        axios.post("https://test-ecomerce.xn--hrt-w-ova.de/api/cart/remove-item",{
+            item_id,
+        },{
+            headers: {
+                Authorization: `Bearer ${token}`, // ✅ Fix: Correct Authorization format
+                "Country-Id": 1,
+                "Content-Type": "application/json", // ✅ Ensure JSON format
+              },
+        }).then(({data})=>{
+            setCartData(data.data);
+             if (data.data && data.data.cart_items) {
+                setCartItem(data.data.cart_items);
+             }
+            console.log(data)
+        }) .finally(()=>{
+            setIsLoading(false)
+        })       
+    } 
+
     if(cartItem == 0){
-        return <h1 className='text-center text-3xl font-bold py-10'>No Product In Your Cart</h1>
+        return <div className="container ">
+            <h1 className='text-center mt-40 mb-32  text-3xl font-bold py-10'>No Product In Your Cart</h1>
+        </div>
     } 
   return (
     <>
@@ -77,7 +104,9 @@ export default function Cart() {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-4">
+                  <Button isLoading={isLoading} onPress={()=>deleteItem(product.id)} className='bg-transparent'>
                   <i className="fa-solid fa-trash text-2xl"></i>
+                  </Button>
                     <button className="group rounded-full border border-gray-200 dark:border-gray-600 p-2.5 flex items-center justify-center bg-white dark:bg-gray-700 transition-all duration-500 hover:bg-gray-50 dark:hover:bg-gray-600">
                       <svg className="stroke-gray-900 dark:stroke-white transition-all duration-500 group-hover:stroke-black" width="18" height="19" viewBox="0 0 18 19" fill="none">
                         <path d="M4.5 9.5H13.5" strokeWidth="1.6" strokeLinecap="round" />
