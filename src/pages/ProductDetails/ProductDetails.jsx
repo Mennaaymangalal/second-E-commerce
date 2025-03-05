@@ -77,12 +77,12 @@ export default function ProductDetails() {
             <form className="flex-auto p-6">
               <div className="flex flex-wrap">
                 <h1 className="flex-auto text-xl font-semibold dark:text-gray-50">{productD?.title}</h1>
-                <div className="text-xl font-semibold text-gray-500 dark:text-gray-300">${productD?.price}</div>
+                <div className="text-xl font-semibold text-gray-500 dark:text-gray-300">${productD?.discount_Price}</div>
                 <div className="flex-none w-full mt-2 text-sm font-medium text-gray-500 dark:text-gray-300">{productD?.description}</div>
               </div>
               <div className="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                <div className="flex space-x-2">
-                  {/* {["XS", "S", "M", "L", "XL"].map((size) => (
+                {/* <div className="flex space-x-2">
+                  {["XS", "S", "M", "L", "XL"].map((size) => (
                     <label key={size} className="text-center">
                       <input 
                         type="radio" 
@@ -91,21 +91,25 @@ export default function ProductDetails() {
                         value={size.toLowerCase()} 
                       /> {size}
                     </label>
-                  ))} */}
+                  ))}
                 </div>
-                {/* <a href="#" className="hidden ml-auto text-sm text-gray-500 underline md:block dark:text-gray-300">
+                <a href="#" className="hidden ml-auto text-sm text-gray-500 underline md:block dark:text-gray-300">
                   Size Guide
                 </a> */}
+                
+                <div className="border-b-2 w-full text-gray-400 my-6"></div>
+
+
               </div>
               <div className="flex mb-4 text-sm font-medium">
                 <button 
                   type="button"
-                  className="py-2 px-4 bg-orange-500 hover:bg-orange-400 focus:ring-orange-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                  className="py-2 px-4 bg-orange-500 hover:bg-orange-400 focus:ring-orange-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full"
                 >
                  Add To Cart
                 </button>
               </div>
-              <p className="text-sm text-gray-500 dark:text-gray-300">Free shipping on all continental US orders.</p>
+             
             </form>
           </div>
         </div>

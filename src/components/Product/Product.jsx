@@ -26,7 +26,7 @@ export default function Product({ product }) {
         <p className="text-lg line-clamp-2">{product.description}</p>
 
         <div className="mt-3 flex items-end justify-between">
-          <p className="text-lg font-bold">${product.price}</p>
+          <p className="text-lg font-bold">${product.discount_Price}</p>
           <button className="flex items-center space-x-1.5 text-2xl rounded-lg px-4 py-1.5">
             <i className="fa-solid fa-circle-plus"></i>
           </button>
