@@ -90,9 +90,9 @@ export default function Login() {
    Cookies.set("token" , data.data.token)
 
   console.log(data.data.token)
-//  if(data.isSuccessful == true){ 
-//   navigate("/")
-//  }
+ if(data.isSuccessful == true){ 
+  navigate("/")
+ }
   setErrMsg(data?.response.data.message)
   
   }).catch((err)=>{
