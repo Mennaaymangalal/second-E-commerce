@@ -8,6 +8,8 @@ import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Shop from './pages/Shop/Shop'
 import ProductDetails from './pages/ProductDetails/ProductDetails';
+import Cart from './pages/Cart/Cart';
+import { ToastContainer } from 'react-toastify';
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
       {path:'/shop' , element:<Shop/>},
       {path:'/login' , element:<Login/>},
       {path:'/register' , element:<Register/>},
+      {path:'/cart' , element:<Cart/>},
       {path:'/productdetails/:id' , element:<ProductDetails/>}
     ]}
   ])  
@@ -26,6 +29,7 @@ function App() {
     <>
      <HeroUIProvider>
       <RouterProvider router={router}></RouterProvider>    
+      <ToastContainer />
      </HeroUIProvider>
      
     </>

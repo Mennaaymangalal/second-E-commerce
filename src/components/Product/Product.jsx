@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { addProductToCart } from '../../Services/CartServices/CartServices';
 
 export default function Product({ product }) {
+
+    
+  
+
   return (
     <article className="rounded-xl dark:bg-slate-950 bg-white p-3 shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300">
      
@@ -26,10 +31,15 @@ export default function Product({ product }) {
         <p className="text-lg line-clamp-2">{product.description}</p>
 
         <div className="mt-3 flex items-end justify-between">
-          <p className="text-lg font-bold">${product.discount_Price}</p>
-          <button className="flex items-center space-x-1.5 text-2xl rounded-lg px-4 py-1.5">
+         <div className="flex ">
+         {/* <p className="text-lg font-bold me-4 line-through">${product.price}</p> */}
+         <p className="text-lg font-bold">${product.discount_Price}</p>
+         </div>
+          
+          <button onClick={()=>addProductToCart(product.id)} className="flex items-center space-x-1.5 text-2xl rounded-lg px-4 py-1.5">
             <i className="fa-solid fa-circle-plus"></i>
           </button>
+         
         </div>
       </div>
     </article>

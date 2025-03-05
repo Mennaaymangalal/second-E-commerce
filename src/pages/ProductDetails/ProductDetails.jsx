@@ -3,6 +3,7 @@ import { h1 } from 'framer-motion/client'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {Card, Skeleton} from "@heroui/react";
+import { addProductToCart } from '../../Services/CartServices/CartServices';
 
 export default function ProductDetails() {
  const [isLoading, setIsLoading] = useState(false)
@@ -75,36 +76,23 @@ export default function ProductDetails() {
                  }
             </div>
             <form className="flex-auto p-6">
-              <div className="flex flex-wrap">
+              <div className="flex flex-wrap items-center">
                 <h1 className="flex-auto text-xl font-semibold dark:text-gray-50">{productD?.title}</h1>
-                <div className="text-xl font-semibold text-gray-500 dark:text-gray-300">${productD?.discount_Price}</div>
+                <div className="text-xl font-semibold text-gray-500 dark:text-gray-300  pe-4 ">${productD?.discount_Price}</div>
+                <div className=" font-semibold text-gray-500 dark:text-gray-300 text-md  line-through">${productD?.price}</div>
+               
                 <div className="flex-none w-full mt-2 text-sm font-medium text-gray-500 dark:text-gray-300">{productD?.description}</div>
               </div>
               <div className="flex items-baseline mt-4 mb-6 text-gray-700 dark:text-gray-300">
-                {/* <div className="flex space-x-2">
-                  {["XS", "S", "M", "L", "XL"].map((size) => (
-                    <label key={size} className="text-center">
-                      <input 
-                        type="radio" 
-                        className="flex items-center justify-center w-6 h-6 accent-violet-600 bg-gray-100 rounded-lg dark:bg-gray-600" 
-                        name="size" 
-                        value={size.toLowerCase()} 
-                      /> {size}
-                    </label>
-                  ))}
-                </div>
-                <a href="#" className="hidden ml-auto text-sm text-gray-500 underline md:block dark:text-gray-300">
-                  Size Guide
-                </a> */}
-                
+             
                 <div className="border-b-2 w-full text-gray-400 my-6"></div>
 
 
               </div>
               <div className="flex mb-4 text-sm font-medium">
-                <button 
+                <button onClick={()=>addProductToCart(productD.id)}
                   type="button"
-                  className="py-2 px-4 bg-orange-500 hover:bg-orange-400 focus:ring-orange-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full"
+                  className="py-2 px-4 bg-orange-500 hover:bg-orange-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md  rounded-full"
                 >
                  Add To Cart
                 </button>

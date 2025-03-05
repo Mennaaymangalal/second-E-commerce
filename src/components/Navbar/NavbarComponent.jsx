@@ -65,7 +65,7 @@ export default function NavbarComponent() {
       <i className="fa-solid fa-magnifying-glass"></i>
 
     
-    <Link>
+    <Link to={"/cart"}>
     <i className="fa-solid fa-cart-shopping"></i>
     </Link>
      
