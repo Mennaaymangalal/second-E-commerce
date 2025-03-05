@@ -16,7 +16,7 @@ export default function ProductDetails() {
 
   function getProductDetails(productId){
     setIsLoading(true)
-    axios.get("http://test-ecomerce.xn--hrt-w-ova.de/api/product/find/" + productId ,{
+    axios.get("https://test-ecomerce.xn--hrt-w-ova.de/api/product/find/" + productId ,{
         headers:{
              "Accept-Language": "en"
         }
