@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
+import img from '../../assets/1740042550_67b6f136af5c0_p1.png'
 
 export default function Cart() {
     const [cartId ,setCartId] = useState(null)
@@ -28,7 +29,7 @@ export default function Cart() {
                 }
 
                 setCartData(data.data); // ✅ Store the whole cart data
-                // console.log("Cart Data:", data.data);
+                 console.log("Cart Data:", data.data);
                 console.log("Cart Items:", data.data.cart_items);
                 // console.log("First Cart Item ID:", data.data.cart_items[0]?.id); // ✅ Safely accessing first item's ID
             } else {
@@ -58,11 +59,11 @@ export default function Cart() {
             cartItem?.map((product , index)=>(
                 <div key={index} className="">
               {/* First Product */}
-              <div className="rounded-3xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4">
+              <div className="rounded-3xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-950 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4">
               <div className="col-span-12 lg:col-span-2">
                 <img
-                  src="https://pagedone.io/asset/uploads/1701162826.png"
-                  alt="Round white portable speaker"
+                  src={img}
+                  alt={product.name}
                   className="max-lg:w-full lg:w-[180px] rounded-lg object-cover"
                 />
               </div>
