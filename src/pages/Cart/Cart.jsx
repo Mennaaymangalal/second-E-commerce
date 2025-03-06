@@ -167,18 +167,15 @@ export default function Cart() {
     //         console.log("price" + data)
     //     })
     // }
-
   
-    
-
-    if(cartItem == 0){
-        return <div className="container ">
-            <h1 className='text-center mt-40 mb-32  text-3xl font-bold py-10'>No Product In Your Cart</h1>
-        </div>
-    } 
+   
   return (
     <>
-    <div className="container text-gray-900 dark:text-white min-h-screen">
+     {
+      cartItem == 0 ?   <div className="container ">
+      <h1 className='text-center mt-40 mb-32  text-3xl font-bold py-10'>No Product In Your Cart</h1>
+      </div>  :
+      <div className="container text-gray-900 dark:text-white min-h-screen">
       <section className="py-24 relative">
        
        
@@ -253,6 +250,7 @@ export default function Cart() {
      
       </section>
     </div> 
+     }
     </>
   )
 }

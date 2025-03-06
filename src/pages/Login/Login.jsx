@@ -78,7 +78,7 @@ export default function Login() {
   
  const initialValues = { 
   email:"",
-  password:"",
+  password:"menna123",
 }
  
   function onSubmit(values){
