@@ -85,7 +85,7 @@ export default function Home() {
       </div>
 
     <div className="container grid grid-cols-1 md:grid-cols-2 md:gap-20">
-      <div className="my-16 ps-8">
+      <div className="my-16 md:ps-8">
         <img className='rounded-r-3xl'
         src={img}
         />

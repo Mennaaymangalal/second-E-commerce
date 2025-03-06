@@ -10,9 +10,7 @@ import img from "../../assets/image.jpeg"
 
 export default function Shop() {
   const [isLoading , setIsLoading] = useState(false)
-  const [products , setProducts] = useState([])
-
-  
+  const [products , setProducts] = useState([])  
 
   function getAllProduct(){
     const token = Cookies.get("token");
