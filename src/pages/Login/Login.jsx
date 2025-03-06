@@ -77,8 +77,8 @@ export default function Login() {
   const toggleVisibility = () => setIsVisible(!isVisible);
   
  const initialValues = { 
-  email:"menna@gmail.com",
-  password:"menna123",
+  email:"",
+  password:"",
 }
  
   function onSubmit(values){

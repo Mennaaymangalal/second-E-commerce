@@ -2,7 +2,7 @@ import { Button, Input } from '@heroui/react'
 import axios from 'axios';
 import { useFormik } from 'formik';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+
 import * as Yup from "yup"
 import Cookies from 'js-cookie'; 
 export const EyeSlashFilledIcon = (props) => {
@@ -71,14 +71,14 @@ export default function Address() {
   const [isLoading, setIsLoading] = useState(false);
   const [errMsg, setErrMsg] = useState("");
 
-//   const navigate = useNavigate()
+
    
   const toggleVisibility = () => setIsVisible(!isVisible);
   
  const initialValues = {
-    shipping_street_address:"street",
-    shipping_state:"cairo",
-    shipping_country:"egypt",  
+    shipping_street_address:"",
+    shipping_state:"",
+    shipping_country:"",  
 }
 
 function onSubmit(){

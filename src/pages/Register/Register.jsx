@@ -76,10 +76,10 @@ export default function Register() {
   const toggleVisibility = () => setIsVisible(!isVisible);
   
  const initialValues = {
-  name:"menna",
-  lastname:"ayman",
-  email:"menna@gmail.com",
-  password:"menna123",
+  name:"",
+  lastname:"",
+  email:"",
+  password:"",
 }
  
   function onSubmit(values){
