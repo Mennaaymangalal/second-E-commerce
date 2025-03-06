@@ -124,7 +124,8 @@ const validationSchema = Yup.object({
   
   return (
     <>
-    <div className="sm:w-2/3 m-auto py-9 mt-24">
+  <div className="container px-4">
+  <div className="sm:w-2/3 m-auto py-9 mt-24">
     <div className="text-center font-Gilroy-Bold">
      <h1 className=' text-2xl font-semibold'>Customer Data for the Order</h1>
      <p className=''>Bringing Your Style Home</p>
@@ -143,6 +144,7 @@ const validationSchema = Yup.object({
      </div>
     </form>
     </div>
+  </div>
     </>
   )
 }

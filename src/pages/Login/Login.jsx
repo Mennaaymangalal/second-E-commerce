@@ -118,7 +118,8 @@ const validationSchema = Yup.object({
   
   return (
     <>
-    <div className="sm:w-2/3 m-auto py-9 mt-24">
+   <div className="container px-4">
+   <div className="sm:w-2/3 m-auto py-9 mt-24">
     <h1 className='font-Gilroy-Bold text-2xl font-semibold text-center'>I am already a customer</h1>
     <form onSubmit={handleSubmit}>
     <div className="py-5 grid gap-4 ">    
@@ -152,6 +153,7 @@ const validationSchema = Yup.object({
      </div>
     </form>
     </div>
+   </div>
     </>
   )
 }
