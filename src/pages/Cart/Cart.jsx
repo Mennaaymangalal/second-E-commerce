@@ -208,9 +208,9 @@ export default function Cart() {
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-4">
-                  <Button isLoading={isLoading} onPress={()=>deleteItem(product.id)} className='bg-transparent'>
-                  <i className="fa-solid fa-trash text-2xl"></i>
-                  </Button>
+                  {/* <Button isLoading={isLoading} onPress={()=>deleteItem(product.id)} className='bg-transparent'> */}
+                  <Button isLoading={isLoading} onPress={()=>deleteItem(product.id)} className="fa-solid fa-trash text-2xl bg-transparent"></Button>
+                  {/* </Button> */}
                     <button disabled={product.qty === 1} onClick={()=>decreaseItem(product.id,product.qty)}  className="group rounded-full border border-gray-200 dark:border-gray-600 p-2.5 flex items-center justify-center bg-white dark:bg-gray-700 transition-all duration-500 hover:bg-gray-50 dark:hover:bg-gray-600">
                       <svg className="stroke-gray-900 dark:stroke-white transition-all duration-500 group-hover:stroke-black" width="18" height="19" viewBox="0 0 18 19" fill="none">
                         <path d="M4.5 9.5H13.5" strokeWidth="1.6" strokeLinecap="round" />
