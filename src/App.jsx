@@ -10,6 +10,7 @@ import Shop from './pages/Shop/Shop'
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import Cart from './pages/Cart/Cart';
 import { ToastContainer } from 'react-toastify';
+import Address from './pages/Address/Address';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       {path:'/login' , element:<Login/>},
       {path:'/register' , element:<Register/>},
       {path:'/cart' , element:<Cart/>},
+      {path:'/address' , element:<Address/>},
       {path:'/productdetails/:id' , element:<ProductDetails/>}
     ]}
   ])  

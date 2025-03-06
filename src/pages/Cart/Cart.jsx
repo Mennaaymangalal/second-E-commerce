@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import img from '../../assets/1740042550_67b6f136af5c0_p1.png'
 import { Button } from '@heroui/react'
+import { Link } from 'react-router-dom'
 
 export default function Cart() {
     const [cartId ,setCartId] = useState(null)
@@ -11,10 +12,13 @@ export default function Cart() {
     const [isLoading , setIsLoading] = useState(false)
     const [cartIsLoading , setCartIsLoading] = useState(false)
 
+    const token = Cookies.get("token");
+
 
     useEffect(()=>{
-        getCartItems()
+        getCartItems()        
     },[])
+  
     function getCartItems(){
         const token = Cookies.get("token");
         axios.get("https://test-ecomerce.xn--hrt-w-ova.de/api/cart/items",{
@@ -151,6 +155,20 @@ export default function Cart() {
                         
         })
     }
+
+    // function orderPrice(){
+    //     const token = Cookies.get("token");
+    //     axios.get("https://test-ecomerce.xn--hrt-w-ova.de/api/order/order-price",{
+    //         headers: {
+    //             Authorization: `Bearer ${token}`,
+    //             "Content-Type": "application/json",
+    //         },
+    //     }).then(({data})=>{
+    //         console.log("price" + data)
+    //     })
+    // }
+
+  
     
 
     if(cartItem == 0){
@@ -201,7 +219,7 @@ export default function Cart() {
                         <path d="M4.5 9.5H13.5" strokeWidth="1.6" strokeLinecap="round" />
                       </svg>
                     </button>
-                    <input value={product.qty} type="text" className="border border-gray-200 dark:border-gray-600 rounded-full w-10 aspect-square outline-none text-gray-900 dark:text-white font-semibold text-sm py-1.5 px-3 bg-gray-100 dark:bg-gray-700 text-center" />
+                    <input onChange={(e)=>e.target.value} value={product.qty} type="text" className="border border-gray-200 dark:border-gray-600 rounded-full w-10 aspect-square outline-none text-gray-900 dark:text-white font-semibold text-sm py-1.5 px-3 bg-gray-100 dark:bg-gray-700 text-center" />
                     <button onClick={()=>increaseItem(product.id,product.qty)} className="group rounded-full border border-gray-200 dark:border-gray-600 p-2.5 flex items-center justify-center bg-white dark:bg-gray-700 transition-all duration-500 hover:bg-gray-50 dark:hover:bg-gray-600">
                       <svg className="stroke-gray-900 dark:stroke-white transition-all duration-500 group-hover:stroke-black" width="18" height="19" viewBox="0 0 18 19" fill="none">
                         <path d="M3.75 9.5H14.25M9 14.75V4.25" strokeWidth="1.6" strokeLinecap="round" />
@@ -226,9 +244,9 @@ export default function Cart() {
             </div>
   
             {/* Checkout Section */}
-            <div className="max-lg:max-w-lg max-lg:mx-auto">           
-              <button className="rounded-full py-3 px-6 bg-orange-500 text-white font-semibold text-lg w-full text-center transition-all duration-500 hover:bg-orange-400">Place Order</button>
-            </div>
+            <Link to={"/address"} className="max-lg:max-w-lg max-lg:mx-auto">           
+              <button  className="rounded-full py-3 px-6 bg-orange-500 text-white font-semibold text-lg w-full text-center transition-all duration-500 hover:bg-orange-400">Place Order</button>
+            </Link>
 
           
           </div>
