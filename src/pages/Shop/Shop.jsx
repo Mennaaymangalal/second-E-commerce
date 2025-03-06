@@ -4,6 +4,7 @@ import Loading from "../../components/Loading/Loading";
 import Product from "../../components/Product/Product";
 import Cookies from "js-cookie";
 import img from "../../assets/image.jpeg"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,13 +13,16 @@ export default function Shop() {
   const [isLoading , setIsLoading] = useState(false)
   const [products , setProducts] = useState([])  
 
+  const navigate = useNavigate()
+
   function getAllProduct(){
     const token = Cookies.get("token");
     
     if (!token) {
         console.error("No authentication token found! Redirecting to login...");
         alert("Session expired. Please log in again.");
-        window.location.href = "/login"; // Redirect to login page
+        // window.location.href = "/login"; // Redirect to login page
+        navigate("/login")
         return;
     }
 
